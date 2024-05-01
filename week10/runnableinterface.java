@@ -9,8 +9,8 @@ class ThreadA implements Runnable{
 }
 class Main{
     public static void main(String[] args){
-        Thread x = new Thread(new ThreadA("Ganesh"));
-        ThreadA y = new ThreadA("Boni");
+        Thread x = new Thread(new ThreadA("emandi"));
+        ThreadA y = new ThreadA("durga");
         y.run();
         x.start();
     }
