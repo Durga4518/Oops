@@ -1,17 +1,24 @@
-class ThreadA implements Runnable{
-    String name;
-    ThreadA(String name){
-        this.name=name;
+class RDemo implements Runnable{
+    int num;
+    RDemo(int num){
+        this.num=num;
     }
     public void run(){
-        System.out.println("hello "+name);
+        System.out.println("START!!");
+        for(int i=1;i<=num;i++){
+            if(i==50){
+                System.out.println(i);
+            }else{
+                System.out.print(i+" ");
+            }
+        }
+        System.out.println("FINISH!!");
     }
 }
-class Main{
+
+public class runnableDemo{
     public static void main(String[] args){
-        Thread x = new Thread(new ThreadA("emandi"));
-        ThreadA y = new ThreadA("durga");
-        y.run();
-        x.start();
+        RDemo obj=new RDemo(50);
+        obj.run();
     }
 }
